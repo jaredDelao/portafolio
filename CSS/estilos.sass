@@ -1,0 +1,646 @@
+$titulo: 25pt
+$titulo2: 20pt 
+$parrafo: 15pt
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'muli'
+    list-style: none
+    text-decoration: none
+
+
+.icono-down
+    position: absolute
+    top: 90%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 20px
+    animation: icono infinite
+    animation-duration: 0.7s
+    animation-direction: alternate
+    img
+        width: 100% 
+
+
+
+@keyframes icono
+    fromtop: 90%
+    totop: 92%
+
+
+body .contenedor-principal
+    width: 100%
+    height: calc(100vh)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    overflow: hidden
+    video
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -1
+        pointer-events: none
+
+
+
+
+#section1, .contenedor-principal
+    overflow: hidden
+
+
+#style
+    width: 50%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+
+.container
+    width:90%
+    margin: 0 auto
+    display: grid
+    height: 100%
+    grid-template-columns: repeat(12,1fr)
+    grid-template-rows: 10% 1fr 1fr 10% 10% 5% 1fr
+    grid-gap: 20px
+    .foto
+        grid-column-start: 5
+        grid-column-end: 9
+        grid-row-start: 2
+        grid-row-end: 4
+        border: 2px solid orange
+
+    .nombre
+        grid-column-start: 5
+        grid-column-end: 9
+        grid-row-start: 4
+        grid-row-end:5
+        justify-self: center
+        align-self: center
+        color: white
+        font-size: 16pt
+        font-weight: 400
+        .line
+            width: 60%
+            height: 2px
+            background-color: white
+            align-self: center
+            justify-self: center
+            margin: 0 auto
+
+
+    .desarrollador
+        grid-column-start: 3
+        grid-column-end: -3
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: center
+        color: white
+        span
+            font-size: $titulo
+            font-weight: 600
+
+
+    .front
+        grid-column-start: 5
+        grid-column-end: 9
+        grid-row-start: 6
+        grid-row-end: 7
+        align-self: top
+        justify-self: end
+        color: #ccc
+        span
+            font-size: $parrafo
+
+
+
+/******Menu***/
+.menu   
+    position: fixed
+    display: grid
+    grid-gap: 10px
+    grid-template-columns: 130px 5%
+    top: 10%
+    right: 7%
+    text-align: right
+
+
+.menu ul
+    grid-column-start: 1
+    grid-column-end: 1
+    
+
+
+.menu ul li
+    font-size: 10pt
+    margin-bottom: 14px
+    color: white
+    cursor: pointer
+
+.menu ul li:nth-child(3)
+    margin-bottom: 0px
+
+
+.menu .line
+    grid-column-start: 2
+    grid-column-end: 2
+
+    width: 25%
+    height: 100%
+    background-color: white
+    animation: line 3s infinite
+    animation-direction: alternate
+
+
+
+
+/********seccion2 acerca de mi*********/
+#section2
+    width: 100%
+    height: 100vh    
+    background-image: linear-gradient(to bottom, black, #213D4B)
+    display: grid
+    .container2
+        width: 80%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: repeat(9, .5fr)
+        grid-gap: 10px
+        color: white
+    .titulo
+        grid-row-start: 2
+        grid-row-end: 3
+        grid-column-start: 1
+        grid-column-end: -1
+        font-size: $titulo
+        align-self: center
+        .line
+            width: 15%
+            height: 2px
+            background: white
+    .texto
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 1
+        grid-column-end: -1
+        font-size: $parrafo
+        align-self: center
+        line-height: 40px
+    .ux
+        grid-column-start: 2
+        grid-column-end: 6 
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: center
+        font-size: $titulo
+        letter-spacing: 5px
+    .ux-img
+        border: 1px solid white
+        grid-column-start: 2
+        grid-column-end: 6 
+        grid-row-start: 6
+        grid-row-end: 9
+    .ui
+        grid-column-start: 8
+        grid-column-end: 12
+        grid-row-start: 5
+        grid-row-end: 6
+        justify-self: center
+        align-self: center
+        font-size: $titulo
+        letter-spacing: 5px
+    .ui-img
+        border: 1px solid white
+        grid-column-start: 8
+        grid-column-end: 12 
+        grid-row-start: 6
+        grid-row-end: 9
+
+
+
+/**********SECCION 3 HABILIDADES*******/
+#section3
+    width: 100%
+    height: 80vh
+    background-color: #213D4B
+    .container3
+        color: white
+        width: 80%
+        height: 100%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(12,1fr)
+        grid-template-rows: repeat(9,10%)
+        grid-gap: 10px
+
+    .titulo
+        grid-column-start: 1
+        grid-column-end: -1
+        grid-row-start: 2
+        grid-row-end: 3
+        justify-self: center
+        align-self: center
+        font-size: $titulo
+    .html
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 4
+        grid-row-end: 5
+        align-self: center
+        justify-self: start
+
+    .bar-html
+        grid-column-start: 3
+        grid-column-end: 6
+        grid-row-start: 4
+        grid-row-end: 5
+        align-self: center
+        justify-self: center
+        width: 100%
+        height: 30%
+        border-radius: 50px
+        background: transparent
+        border: 1px solid #1abc9c
+        position: relative
+
+    .bar-html::after
+        content: '90%'
+        text-align: center
+        position: absolute
+        background: #1abc9c
+        color: #fff
+        width: 90%
+        height: 100%
+        border-radius: 50px
+        font-size: 10pt
+        font-weight: 600
+
+    .css
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: start
+        font-size: 10pt
+        color: #9b9b9b   
+
+    .bar-css
+        grid-column-start: 3
+        grid-column-end: 6
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: center
+
+        width: 100%
+        height: 30%
+        border-radius: 50px
+        background: transparent
+        border: 1px solid #e95242
+        position: relative
+
+    .bar-css::after
+        content: '78%'
+        text-align: center
+        position: absolute
+        background: #e95242
+        color: #fff
+        width: 78%
+        height: 100%
+        border-radius: 50px
+        font-size: 10pt
+        font-weight: 600
+
+
+    .js
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 6
+        grid-row-end: 7
+        align-self: center
+        justify-self: start
+        font-size: 10pt
+        color: #9b9b9b  
+
+    .bar-js
+        grid-column-start: 3
+        grid-column-end: 6
+        grid-row-start: 6
+        grid-row-end: 7
+        align-self: center
+        justify-self: center
+
+        width: 100%
+        height: 30%
+        border-radius: 50px
+        background: transparent
+        border: 1px solid #1abc9c
+        position: relative
+
+    .bar-js::after
+        content: '60%'
+        text-align: center
+        position: absolute
+        background: #1abc9c
+        color: #fff
+        width: 60%
+        height: 100%
+        border-radius: 50px
+        font-size: 10pt
+        font-weight: 600
+
+
+    .php
+        grid-column-start: 8
+        grid-column-end: 10
+        grid-row-start: 4
+        grid-row-end: 5
+        align-self: center
+        justify-self: start
+        font-size: 10pt
+        color: #9b9b9b
+
+    .bar-php
+        grid-column-start: 10
+        grid-column-end: 13
+        grid-row-start: 4
+        grid-row-end: 5
+        align-self: center
+        justify-self: center
+        position: relative
+        width: 100%
+        height: 30%
+        border-radius: 50px
+        background: transparent
+        border: 1px solid #e95242
+
+    .bar-php::after
+        content: '40%'
+        text-align: center
+        position: absolute
+        background: #e95242
+        color: #fff
+        width: 40%
+        height: 100%
+        border-radius: 50px
+        font-size: 10pt
+        font-weight: 600 
+
+
+    .angular
+        grid-column-start: 8
+        grid-column-end: 10
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: start
+        font-size: 10pt
+        color: #9b9b9b
+
+    .bar-angular
+        grid-column-start: 10
+        grid-column-end: 13
+        grid-row-start: 5
+        grid-row-end: 6
+        align-self: center
+        justify-self: center
+        position: relative
+        width: 100%
+        height: 30%
+        border-radius: 50px
+        background: transparent
+        border: 1px solid #1abc9c
+
+    .bar-angular::after
+        content: '30%'
+        text-align: center
+        position: absolute
+        background: #1abc9c
+        color: #fff
+        width: 30%
+        height: 100%
+        border-radius: 50px
+        font-size: 10pt
+        font-weight: 600
+
+    #titulo-h
+        font-size: $parrafo
+        color: white
+            
+
+
+
+
+/*********SECCION 4 PROYECTOS*******/
+
+#section4
+    width: 100%
+    height: auto
+    background-color: #213D4B
+    .container4
+        width: 80%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: repeat(12, .1fr)
+        grid-gap: 10px
+        color: white
+        .titulo
+            grid-column: 1/-1
+            align-self: center
+            justify-self: start
+            font-size: $titulo
+            .line
+                width: 40%
+                height: 2px
+                background: white
+                align-self: center
+                justify-self: start
+
+
+        .cosmic
+            box-shadow: 5px 5px 30px black
+            grid-column: 3/11
+            grid-row: 3/4
+
+        .text-cosmic
+            grid-column: 3/11
+            grid-row: 4/5
+            align-self: end
+            justify-self: center
+
+
+        .bengala
+            box-shadow: 5px 5px 30px black
+            grid-column: 3/11
+            grid-row: 6/7
+
+        .text-bengala
+            grid-column: 3/11
+            grid-row: 7/8
+            align-self: end
+            justify-self: center
+
+
+        .nueces
+            grid-column: 3/11
+            grid-row: 9/10
+            box-shadow: 5px 5px 30px black
+            border-radius: 15px
+
+
+        .nueces img, .cosmic img, .bengala img
+            width: 100%
+            height: 100%
+            transition: all .5s
+            border-radius: 15px
+
+
+        .nueces img:hover
+            opacity: 0
+
+        .text-nueces
+            grid-column: 3/11
+            grid-row: 10/11
+            align-self: end
+            justify-self: center
+
+
+        .cosmic,.nueces,.bengala
+            border-radius: 15px
+
+
+
+/************FOOTER********/
+#footer
+    width: 100%
+    background-color:#fff
+    .container5
+        background-color: white
+        width: 80%    
+        margin: 0 auto
+        display: grid
+        grid-gap: 25px
+        grid-template-columns: repeat(12,1fr)
+        grid-template-rows: 20px 1fr 1fr 1fr 1fr 20px
+                        
+
+
+        .contacto
+            grid-column: 1/-1
+            grid-row: 2/3
+            justify-self: center
+            font-size: $titulo
+            align-self: end
+            color: #213D4B
+
+
+        .correo
+            grid-column: 3/6
+            grid-row: 3/4
+            justify-self: start
+            align-self: center
+            font-size: $parrafo
+            color: #213D4B
+
+
+        .telefono
+            grid-column: 3/6
+            grid-row: 4/5
+            justify-self: start
+            align-self: center
+            font-size: $parrafo
+            color: #213D4B
+
+        .trabajar
+            grid-column: 8/12
+            grid-row: 3/4
+            justify-self: center
+            align-self: center
+            font-size: $parrafo
+            color: #213D4B
+            font-weight: 600
+
+
+        .form
+            grid-column: 8/12
+            grid-row: 4/5
+            justify-self: center
+            align-self: center
+
+
+        .icono-c
+            grid-column: 2/3
+            grid-row: 3/4
+            justify-self: center
+            align-self: center
+
+        .icono-c img
+            width: 40px
+
+        .icono-n
+            grid-column: 2/3
+            grid-row: 4/5
+            justify-self: center
+            align-self: center
+
+        .icono-n img
+            width: 40px
+
+
+        .rss
+            grid-column: 1/-1
+            grid-row: 5/6
+            align-self: center
+            justify-self: center
+            img
+                width: 30px
+                margin: 0 10px
+            
+
+
+        .rss>div
+            display: inline
+
+        
+
+        .form
+            width: 80%
+
+
+        input[type='text']
+            background: #213D4B
+            border: none
+            width:80%
+            height: 35px
+            padding: 0px 10px
+            color: white
+            border-radius: 8px
+           
+
+
+        input[type='submit']
+            border: none
+            width:15%
+            height: 35px
+            background: url(../assets/send.png)
+            background-repeat: no-repeat
+            background-size: 60%
+            background-position: center center
+            cursor: pointer
+
+
+        submit::placeholder    
+            color: white
+            text-align: center
+
+
